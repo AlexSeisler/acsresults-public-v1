@@ -1,12 +1,13 @@
-// src/components/HeroSection.jsx
+// src/sections/Hero/HeroSection.jsx
 
 import React from 'react';
-import '../styles/HeroSection.css';
-import { heroSection } from '../copy/copy.js';
+import './HeroSection.css';
+import { heroSection } from '../../content/content.js';
+
 
 const HeroSection = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="here">
       {/* 🎯 Strategy: Position Clearly */}
       <h1 className="hero-headline">{heroSection.headline}</h1>
       <p className="hero-subheading">{heroSection.subheading}</p>

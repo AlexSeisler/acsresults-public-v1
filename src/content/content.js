@@ -1,4 +1,4 @@
-// src/copy/copy.js
+// src/content/content.js
 
 export const heroSection = {
   headline: "Modern AI Systems. Real Results.",

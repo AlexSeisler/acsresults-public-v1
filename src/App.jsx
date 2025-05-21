@@ -1,11 +1,27 @@
+// src/App.jsx
+
 import React from 'react';
-import HeroSection from './components/HeroSection';
+import HeaderSection from './sections/Header/HeaderSection';
+import HeroSection from './sections/Hero/HeroSection';
+import WhoWeAreSection from './sections/WhoWeAre/WhoWeAreSection';
+import OurSystemsSection from './sections/OurSystems/OurSystemsSection';
+import FooterSection from './sections/Footer/FooterSection';
+import LiveCampaignSection from './sections/LiveCampaign/LiveCampaignSection';
 
 function App() {
   return (
-    <div className="App">
-      <HeroSection />
-    </div>
+    <>
+      <HeaderSection />
+
+      <main>
+        <HeroSection />
+        <WhoWeAreSection />
+        <OurSystemsSection />
+        <LiveCampaignSection />
+      </main>
+
+      <FooterSection />
+    </>
   );
 }
 

@@ -1,0 +1,37 @@
+/* src/sections/LiveCampaign/LiveCampaignSection.css */
+
+.live-campaign {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.campaign-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.campaign-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.campaign-cta {
+  font-weight: bold;
+  background: #111;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s ease;
+}
+
+.campaign-cta:hover {
+  background: #000;
+}

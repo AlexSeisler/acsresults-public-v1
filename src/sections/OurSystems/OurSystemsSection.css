@@ -1,0 +1,46 @@
+/* src/sections/OurSystems/OurSystemsSection.css */
+
+.our-systems {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.systems-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.system-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.system-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.system-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.system-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
