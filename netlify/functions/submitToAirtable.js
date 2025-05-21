@@ -1,8 +1,8 @@
 // netlify/functions/submitToAirtable.js
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async (event) => {
+export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -11,7 +11,7 @@ exports.handler = async (event) => {
 
   const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
   const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
-  const AIRTABLE_TABLE_NAME = 'Submissions';
+  const AIRTABLE_TABLE_NAME = 'CTA';
 
   const airtableURL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`;
 
@@ -28,7 +28,6 @@ exports.handler = async (event) => {
           Email: email,
           UseCase: useCase,
           Source: source,
-          Timestamp: timestamp,
         },
       }),
     });
@@ -48,4 +47,4 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: err.message }),
     };
   }
-};
+}

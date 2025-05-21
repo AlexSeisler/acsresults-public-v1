@@ -40,6 +40,7 @@ const CTAFormSection = () => {
       if (res.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', useCase: '' });
+        window.location.href = '/thank-you';
       } else {
         throw new Error('Submission failed');
       }

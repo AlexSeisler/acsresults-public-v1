@@ -1,0 +1,10 @@
+[dev]
+command = "vite"
+targetPort = 5173
+port = 8888
+framework = "#custom"
+autoLaunch = true
+
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
