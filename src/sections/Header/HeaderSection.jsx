@@ -26,20 +26,25 @@ const HeaderSection = () => {
       </div>
 
 
+        <div className="menu-wrapper">
         <button
           className="menu-toggle"
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          aria-controls="main-menu"
           onClick={toggleMenu}
         >
           ☰
         </button>
 
-        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`} id="main-menu">
           <li><a href="#hero">Home</a></li>
           <li><a href="#who-we-are">Who We Are</a></li>
           <li><a href="#our-systems">Systems</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
+
       </nav>
     </header>
   );
