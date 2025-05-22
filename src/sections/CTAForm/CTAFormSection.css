@@ -1,48 +1,117 @@
-/* src/sections/CTAForm/CTAFormSection.css */
-
+/* ===== CTA FORM SECTION ===== */
 .cta-form {
-  padding: 4rem 1rem;
-  background: #f5f5f5;
+  background: #0a0a0a;
+  padding: clamp(5rem, 10vh, 8rem) 2rem;
   text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cta-form h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--brand-light);
+  text-shadow: 0 0 12px rgba(0, 200, 255, 0.15);
 }
 
 .cta-form p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  color: #ccc;
+  opacity: 0.9;
 }
 
-form {
-  max-width: 500px;
+/* ===== FORM CONTAINER ===== */
+.cta-form form {
+  width: 100%;
+  max-width: 340px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.015);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 32px rgba(0, 200, 255, 0.04);
+  backdrop-filter: blur(14px);
 }
 
-input,
-select {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
+/* ===== INPUTS & SELECTS ===== */
+.cta-form input,
+.cta-form select {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
   background: #111;
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  font-size: 1rem;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.cta-form input::placeholder {
+  color: #666;
+}
+
+.cta-form input:focus,
+.cta-form select:focus {
+  border-color: #00c8ff;
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+  background: #151515;
+}
+
+/* ===== CUSTOM DROPDOWN ===== */
+.cta-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.cta-form button {
+  background: linear-gradient(135deg, #00c8ff, #0077b6);
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.03em;
+  margin-top: 0.5rem;
+}
+
+.cta-form button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.4);
+}
+
+/* ===== STATUS MESSAGES ===== */
+.cta-form .status-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ===== POLISHING ===== */
+.cta-form form:hover {
+  box-shadow: 0 0 48px rgba(0, 200, 255, 0.08);
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form button {
+  box-sizing: border-box;
 }

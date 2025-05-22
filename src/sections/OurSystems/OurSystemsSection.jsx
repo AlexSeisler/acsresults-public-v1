@@ -4,7 +4,6 @@ import React from 'react';
 import './OurSystemsSection.css';
 import { ourSystemsSection } from '../../content/content.js';
 
-
 const OurSystemsSection = () => {
   const systems = [
     {
@@ -25,16 +24,21 @@ const OurSystemsSection = () => {
   ];
 
   return (
-    <section className="our-systems" id="our-systems">
-      {/* 🎯 Strategy: Showcase the Trifecta Clearly */}
-      <h2 className="systems-header">{ourSystemsSection.header}</h2>
-      <div className="systems-grid">
-        {systems.map((system) => (
-          <div className="system-card" key={system.key}>
-            <h3>{system.title}</h3>
-            <p>{system.desc}</p>
-          </div>
-        ))}
+    <section className="our-systems-section" id="our-systems">
+      <div className="our-systems-content">
+        <h2 className="systems-header">{ourSystemsSection.header}</h2>
+
+        <div className="systems-card-grid">
+          {systems.map((system, index) => (
+            <div className="system-card" key={system.key} style={{ animationDelay: `${index * 0.3}s` }}>
+              <div className="card-glow" />
+              <div className="card-inner">
+                <h3 className="card-title">{system.title}</h3>
+                <p className="card-description">{system.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

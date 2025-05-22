@@ -1,38 +1,209 @@
-/* src/sections/Header/HeaderSection.css */
+/* ========= GLOBAL THEME TOKENS ========= */
+:root {
+  --brand-dark: #0a0a0a;
+  --brand-light: #ffffff;
+  --brand-signal: #00c8ff;
+  --brand-steel: #b0c4d8;
+  --brand-accent: #0077b6;
+}
 
+/* ========= STICKY HEADER CONTAINER ========= */
 .site-header {
-  background: white;
-  padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
+  width: 100%;
+  background-color: var(--brand-dark);
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 9999;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInHeader 0.5s ease-out forwards;
 }
 
+.site-header.scrolled {
+  background-color: #111;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+}
+
+/* ========= NAV CONTAINER ========= */
 .top-nav {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 0.25rem;
+  position: relative;
+  z-index: 1;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+/* ========= LOGO IMAGE ========= */
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 0 3px rgba(0, 200, 255, 0.3));
+  animation: glowPulse 4s ease-in-out infinite;
 }
 
+.logo img:hover {
+  opacity: 0.85;
+}
+
+/* ========= NAV LINKS ========= */
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: var(--brand-light);
+  letter-spacing: 0.02em;
   text-decoration: none;
-  color: #333;
-  font-size: 0.95rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--brand-signal), var(--brand-accent));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: black;
-  font-weight: bold;
+  color: var(--brand-steel);
+  transform: translateY(-1px);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========= HIDE HAMBURGER ON DESKTOP ========= */
+.menu-toggle {
+  display: none !important;
+}
+
+/* ========= ANIMATED AMBIENT BACKGROUND ========= */
+.header-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+  filter:
+    brightness(1.3)
+    contrast(1.4)
+    drop-shadow(0 0 6px rgba(0, 200, 255, 0.4))
+    drop-shadow(0 0 16px rgba(0, 200, 255, 0.2));
+  transition: filter 0.3s ease, transform 0.3s ease;
+  animation: logoGlowPulse 4s ease-in-out infinite;
+}
+
+.logo img:hover {
+  transform: scale(1.04);
+  filter:
+    brightness(1.5)
+    contrast(1.6)
+    drop-shadow(0 0 12px rgba(0, 200, 255, 0.5))
+    drop-shadow(0 0 24px rgba(0, 200, 255, 0.25));
+}
+
+/* Enhanced glow pulse */
+@keyframes logoGlowPulse {
+  0%, 100% {
+    filter:
+      brightness(1.3)
+      contrast(1.4)
+      drop-shadow(0 0 6px rgba(0, 200, 255, 0.35))
+      drop-shadow(0 0 14px rgba(0, 200, 255, 0.15));
+  }
+  50% {
+    filter:
+      brightness(1.45)
+      contrast(1.6)
+      drop-shadow(0 0 12px rgba(0, 200, 255, 0.5))
+      drop-shadow(0 0 20px rgba(0, 200, 255, 0.25));
+  }
+}
+
+.header-ambient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1000px; /* wider beam */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 200, 255, 0) 10%,
+    rgba(0, 200, 255, 0.4) 50%,
+    rgba(0, 200, 255, 0.6) 60%,
+    rgba(0, 200, 255, 0.4) 75%,
+    rgba(0, 200, 255, 0) 100%
+  );
+  filter: blur(40px);
+  opacity: 1;
+  animation: beamSweep 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes beamSweep {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+
+/* ========= KEYFRAME ANIMATIONS ========= */
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(0, 200, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 200, 255, 0.45);
+  }
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

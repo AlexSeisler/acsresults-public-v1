@@ -1,39 +1,72 @@
-/* src/sections/Footer/FooterSection.css */
-
+/* ===== FOOTER BASE ===== */
 .footer {
-  background-color: #111;
-  color: #fff;
+  background: #080808;
+  padding: 4rem 2rem 2rem;
   text-align: center;
-  padding: 2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 2;
 }
 
+/* Optional glowing ambient */
+.footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.04), transparent 80%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== TAGLINE ===== */
 .footer-tagline {
-  font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--brand-light);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
+/* ===== LINKS ===== */
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-links a {
-  color: #ccc;
-  text-decoration: none;
+  color: #aaa;
   font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: #00c8ff;
+  text-shadow: 0 0 6px rgba(0, 200, 255, 0.2);
 }
 
+/* ===== FOOTER NOTE ===== */
 .footer-note {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  opacity: 0.8;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0.7;
 }

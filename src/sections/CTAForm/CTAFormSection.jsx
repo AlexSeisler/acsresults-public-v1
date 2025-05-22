@@ -13,7 +13,6 @@ const CTAFormSection = () => {
 
   const [status, setStatus] = useState(null);
 
-  // ✅ Correct order — define URL params first, then extract "source"
   const urlParams = new URLSearchParams(window.location.search);
   const sourceParam = urlParams.get('source') || window.location.href;
 
@@ -51,45 +50,66 @@ const CTAFormSection = () => {
   };
 
   return (
-    <section className="cta-form" id="contact">
-      <h2>{ctaFormSection.header}</h2>
-      <p>{ctaFormSection.body}</p>
+    <section className="cta-form-section" id="contact">
+      <div className="cta-form-wrapper">
+        <h2 className="cta-form-header">{ctaFormSection.header}</h2>
+        <p className="cta-form-subtext">{ctaFormSection.body}</p>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <select
-          name="useCase"
-          value={formData.useCase}
-          onChange={handleChange}
-          required
-        >
-          <option value="">What are you looking to automate?</option>
-          <option value="School Campaign">School Campaign</option>
-          <option value="Product Launch">Product Launch</option>
-          <option value="SMMA / Client Work">SMMA / Client Work</option>
-          <option value="Other">Other</option>
-        </select>
-        <button type="submit">Get in Touch →</button>
+        <form className="cta-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        {status === 'loading' && <p>Submitting...</p>}
-        {status === 'success' && <p>✅ Submitted successfully!</p>}
-        {status === 'error' && <p>❌ Something went wrong. Try again.</p>}
-      </form>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="useCase">What are you looking to automate?</label>
+            <select
+              name="useCase"
+              id="useCase"
+              value={formData.useCase}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select a use case</option>
+              <option value="School Campaign">School Campaign</option>
+              <option value="Product Launch">Product Launch</option>
+              <option value="SMMA / Client Work">SMMA / Client Work</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" className="cta-submit-button">
+            Get in Touch →
+          </button>
+
+          <div className="cta-form-status">
+            {status === 'loading' && <p className="status loading">Submitting...</p>}
+            {status === 'success' && <p className="status success">✅ Submitted successfully!</p>}
+            {status === 'error' && <p className="status error">❌ Something went wrong. Try again.</p>}
+          </div>
+        </form>
+      </div>
     </section>
   );
 };

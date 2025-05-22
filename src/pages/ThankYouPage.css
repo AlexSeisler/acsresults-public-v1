@@ -1,0 +1,79 @@
+/* ===== THANK YOU PAGE ===== */
+.thank-you-page {
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  padding: clamp(4rem, 10vh, 6rem) 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeSlideUp 0.8s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* Ambient background glow */
+.thank-you-page::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.06), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.thank-you-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-light);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 16px rgba(0, 200, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-page p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-page a {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #00c8ff, #0077b6);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-page a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

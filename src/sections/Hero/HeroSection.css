@@ -1,30 +1,168 @@
-/* src/sections/Hero/HeroSection.css */
+/* ========= HERO BASE ========== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(4rem, 12vh, 6rem);
+padding-bottom: clamp(5rem, 16vh, 8rem);
+min-height: auto;
 
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero-headline {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-subheading {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.hero-cta {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: black;
+  background-color: #0a0a0a;
   color: white;
-  border: none;
-  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 4rem 2rem 6rem;
+
+  z-index: 1;
+}
+
+/* ========= AMBIENT BACKGROUND EFFECT ========== */
+.hero-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 30%, rgba(0, 200, 255, 0.08), transparent 70%);
+  animation: floatGlow 12s ease-in-out infinite alternate;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section {
+  background-color: #0a0a0a;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(0, 200, 255, 0.05), transparent 70%),
+    repeating-linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 80px),
+    repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 80px);
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(10, 10, 10, 0.4) 8%,
+    rgba(10, 10, 10, 0.08) 20%,
+    rgba(10, 10, 10, 0) 30%,
+    rgba(10, 10, 10, 0) 70%,
+    rgba(10, 10, 10, 0.08) 80%,
+    rgba(10, 10, 10, 0.4) 92%,
+    rgba(10, 10, 10, 1) 100%
+  );
+}
+
+
+
+
+
+@keyframes floatGlow {
+  0% {
+    transform: translate(-10%, -10%) scale(1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(-5%, 5%) scale(1.1);
+    opacity: 0.15;
+  }
+}
+
+/* ========= CONTENT CONTAINER ========== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  min-height: 40vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========= HEADLINE ========== */
+.hero-headline {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-family: 'Satoshi', sans-serif;
+  background: linear-gradient(to right, #00c8ff, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headlineGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes headlineGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+  }
+}
+
+/* ========= SUBTEXT ========== */
+.hero-subheading {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+/* ========= CALL TO ACTION ========== */
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 2px solid var(--brand-signal);
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.35s ease;
   cursor: pointer;
+}
+
+.hero-cta:hover {
+  background-color: var(--brand-signal);
+  color: #0a0a0a;
+  box-shadow: 0 0 24px rgba(0, 200, 255, 0.5);
+  transform: scale(1.03);
+}
+
+.hero-cta::after {
+  content: '→';
+  margin-left: 0.75rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.hero-cta:hover::after {
+  transform: translateX(5px);
 }

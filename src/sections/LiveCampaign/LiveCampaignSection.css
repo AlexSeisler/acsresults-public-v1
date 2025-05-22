@@ -1,37 +1,130 @@
-/* src/sections/LiveCampaign/LiveCampaignSection.css */
-
+/* ====== SECTION CONTAINER ====== */
 .live-campaign {
-  padding: 4rem 1rem;
-  background: #fff;
+  position: relative;
+  width: 100%;
+  padding: clamp(5rem, 12vh, 8rem) 2rem;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.live-campaign-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeInCampaign 1.3s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
+/* ====== FADE IN ANIMATION ====== */
+@keyframes fadeInCampaign {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== HEADER ====== */
 .campaign-header {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: var(--brand-light);
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
 }
 
+/* ====== BODY TEXT ====== */
 .campaign-body {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #ccc;
+  margin-bottom: 3rem;
+  opacity: 0.92;
+  font-family: 'Inter', sans-serif;
 }
 
+/* ====== CTA BUTTON ====== */
 .campaign-cta {
-  font-weight: bold;
-  background: #111;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  color: var(--brand-signal);
   text-decoration: none;
-  display: inline-block;
-  transition: background 0.2s ease;
+  border-radius: 12px;
+  position: relative;
+  background: rgba(0, 200, 255, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .campaign-cta:hover {
-  background: #000;
+  transform: translateY(-2px);
+  background: rgba(0, 200, 255, 0.08);
+  border-color: rgba(0, 200, 255, 0.5);
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.25);
+}
+
+.cta-label {
+  z-index: 2;
+  position: relative;
+  background: linear-gradient(to right, #00c8ff, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ====== GLOW ANIMATION BEHIND CTA ====== */
+.cta-glow {
+  content: '';
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.15), transparent 60%);
+  filter: blur(40px);
+  animation: pulseCTA 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulseCTA {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.25;
+  }
+}
+
+/* ====== PROOF ORB BACKGROUND ====== */
+.campaign-orb {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.05), transparent 80%);
+  filter: blur(100px);
+  animation: glowPulse 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.06;
+  }
+  50% {
+    opacity: 0.14;
+  }
 }
