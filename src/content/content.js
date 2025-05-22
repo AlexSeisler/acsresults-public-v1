@@ -1,61 +1,61 @@
 // src/content/content.js
 
 export const heroSection = {
-  headline: "Modern AI Infrastructure. Real-World Results.",
+  headline: "Build Faster. Operate Smarter.",
   subheading:
-    "ACS Results AI builds execution-first systems for founders, agencies, and civic campaigns. Automation that works — built by operators, not marketers.",
+    "ACS Results AI gives startups, agencies, and creators the execution engine they've been missing, modular infrastructure, built by a systems founder, not a marketer.",
   cta: "Explore Our Systems →",
 };
 
 export const whoWeAreSection = {
-  header: 'Who We Are',
-  body: `Founded by systems builder Alex Seisler, ACS Results AI is an execution-focused infrastructure company that powers visibility, automation, and operational clarity.
+  header: "Operator-Built. Vision-Aligned.",
+  body: `ACS Results AI was founded by systems builder Alex Seisler to help founders stop duct-taping tools and start scaling with structure.
 
-We don’t sell hype — we build modular tools and intelligent workflows that scale content, decision-making, and results for those doing real work.`,
+We're not another productivity app, we're the backbone for modern operators who need their workflows to work *like code*. Think automation, memory, routing, visibility — baked in.`,
   cards: [
-    'Local Campaign Leaders',
-    'Startup Founders',
-    'Creators & Agencies'
+    'Tech Founders',
+    'Solo Operators & Creators',
+    'Agencies & Product Teams'
   ],
   cardDescriptions: [
-    'Tools for civic outreach, school systems, and local engagement.',
-    'Infrastructure to scale visibility, automation, and ops.',
-    'Content systems and AI support for growth-minded creatives.'
+    'Foundational infrastructure to scale visibility, execution, and decision-making.',
+    'Task-routing, memory agents, and AI copilots tuned to your flow.',
+    'Approval pipelines, content automation, and modular dashboards for growth at scale.'
   ]
 };
 
 export const ourSystemsSection = {
-  header: "Our Systems",
-  tagline: "Everything we build connects back to these three pillars — and scales with you.",
+  header: "What Powers ACS Results",
+  tagline: "Everything we build connects and compounds.",
   smmaa: {
-    title: "SMMAA – Social Media Marketing Automation",
-    desc: "Content, scheduling, analytics, and approval flows for agencies and local clients.",
+    title: "SMMAA – Scalable Content Systems",
+    desc: "Automated content planning, scheduling, approvals, and reporting, engineered for agencies and product-driven brands.",
   },
   cian: {
-    title: "CIAN – Centralized AI Infrastructure",
-    desc: "Task-routing, persistent memory agents, and AI assistance for founder workflows.",
+    title: "CIAN – Your AI Operating Core",
+    desc: "Persistent memory, task-aware routing, and assistant-driven operations. It's your second brain, wired into execution.",
   },
   tools: {
     title: "Modular Tools",
-    desc: "Caption planners, content dashboards, and micro-products built for speed and resale.",
+    desc: "Caption builders, content planners, data dashboards, and AI blocks you can drop into your stack.",
   },
 };
 
 export const liveCampaignSection = {
-  header: "Live Now: Columbia Borough 300th Anniversary",
-  body: "ACS Results AI is currently powering the automation behind Columbia PA’s 300th Anniversary campaign — from submission workflows to civic visibility systems. A real system supporting real impact.",
-  cta: "View Campaign Highlights →",
+  header: "Used in the Real World. Built for What’s Next.",
+  body: "ACS Results AI is currently powering full backend systems for real civic campaigns, with full automation behind content intake, routing, and public visibility. The same stack now scales to founders, agencies, and creators.",
+  cta: "See It In Action →",
 };
 
 export const ctaFormSection = {
-  header: "Let’s Build Systems That Scale With You.",
-  body: "Tell us what you're building — and what you'd like to automate. Whether you're launching a product, running a school campaign, or scaling an agency, we'll show you exactly how our infrastructure can plug in.",
-  fields: ["Name", "Email", "What are you looking to automate?"],
-  cta: "Get in Touch →",
+  header: "Let’s Plug In to Your Stack.",
+  body: "Tell us what you're building, and what you wish was automatic. Whether it's scheduling, approvals, operations, or content flow, we’ll show you how our infrastructure integrates with your vision.",
+  fields: ["Name", "Email", "What do you want to automate?"],
+  cta: "Run the System →",
 };
 
 export const footerSection = {
-  tagline: "ACS Results — AI Systems for Founders, Campaigns & Creators",
+  tagline: "ACS Results — The Execution Engine for Founders & Builders",
   links: ["Instagram", "Twitter", "Contact"],
-  note: "Built by Alex Seisler. Operator-owned. Systems-first.",
+  note: "Operator-built. Mission-backed. System-first.",
 };
