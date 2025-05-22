@@ -1,0 +1,6 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Link to your sitemap
+Sitemap: https://acsresultsai.net/sitemap.xml
