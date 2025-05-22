@@ -118,3 +118,48 @@
   font-family: 'Inter', sans-serif;
   opacity: 0.95;
 }
+@media (max-width: 600px) {
+  .our-systems-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .systems-header {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+  }
+
+  .systems-card-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .system-card {
+    width: 90vw;
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+
+    /* ✅ FIXED */
+    backdrop-filter: none;
+    background: rgba(0, 200, 255, 0.05);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    opacity: 1; /* ✅ Ensures clarity */
+    color: #ddd; /* ✅ Slightly brighter for legibility */
+  }
+
+  .our-systems-section::before {
+    width: 90vw;
+    height: 90vw;
+    filter: blur(50px);
+  }
+}
+

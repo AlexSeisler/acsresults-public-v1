@@ -111,14 +111,18 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 520px;
-  height: 520px;
+  width: 65vw;
+  height: 65vw;
+  max-width: 520px;
+  max-height: 520px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0, 200, 255, 0.05), transparent 80%);
   filter: blur(100px);
   animation: glowPulse 10s ease-in-out infinite;
   z-index: 0;
+  pointer-events: none;
 }
+
 
 @keyframes glowPulse {
   0%, 100% {
@@ -126,5 +130,43 @@
   }
   50% {
     opacity: 0.14;
+  }
+}
+/* 🔽 Mobile Optimization: LiveCampaignSection */
+@media (max-width: 600px) {
+  .live-campaign {
+    padding: 4rem 1.25rem;
+  }
+
+  .campaign-header {
+    font-size: 1.8rem;
+    line-height: 1.35;
+    margin-bottom: 1.5rem;
+  }
+
+  .campaign-body {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+
+  .campaign-cta {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .cta-label {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .campaign-orb {
+    width: 85vw;
+    height: 85vw;
+    max-width: none;
+    max-height: none;
+    filter: blur(60px);
   }
 }

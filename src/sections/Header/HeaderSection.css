@@ -173,8 +173,9 @@
   content: '';
   position: absolute;
   top: 0;
+  left: -50vw; /* 👈 responsive start */
   height: 100%;
-  width: 1000px; /* wider beam */
+  width: 200vw; /* 👈 double viewport width */
   background: linear-gradient(
     90deg,
     rgba(0, 200, 255, 0) 10%,
@@ -186,7 +187,9 @@
   filter: blur(40px);
   opacity: 1;
   animation: beamSweep 5s ease-in-out infinite alternate;
+  pointer-events: none;
 }
+
 
 
 @keyframes beamSweep {
