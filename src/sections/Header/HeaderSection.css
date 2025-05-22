@@ -53,6 +53,19 @@
 .logo img:hover {
   opacity: 0.85;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 200, 255, 0.2);
+  letter-spacing: 0.05em;
+}
 
 /* ========= NAV LINKS ========= */
 .nav-links {

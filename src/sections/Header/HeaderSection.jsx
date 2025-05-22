@@ -21,8 +21,10 @@ const HeaderSection = () => {
       
       <nav className="top-nav" role="navigation" aria-label="Main Navigation">
         <div className="logo">
-          <img src="/Logo.png" alt="ACS Results Logo" />
-        </div>
+        <img src="/Logo.png" alt="ACS Results Logo" />
+        <span className="logo-text">ACS Results</span>
+      </div>
+
 
         <button
           className="menu-toggle"
