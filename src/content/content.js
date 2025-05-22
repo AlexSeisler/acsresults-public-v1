@@ -11,7 +11,7 @@ export const whoWeAreSection = {
   header: "Operator-Built. Vision-Aligned.",
   body: `ACS Results AI was founded by systems builder Alex Seisler to help founders stop duct-taping tools and start scaling with structure.
 
-We're not another productivity app, we're the backbone for modern operators who need their workflows to work *like code*. Think automation, memory, routing, visibility — baked in.`,
+We're not another productivity app, we're the backbone for modern operators who need their workflows to work *like code*. Think automation, memory, routing, visibility... baked in.`,
   cards: [
     'Tech Founders',
     'Solo Operators & Creators',
