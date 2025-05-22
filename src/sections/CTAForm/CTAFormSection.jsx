@@ -9,6 +9,7 @@ const CTAFormSection = () => {
     name: '',
     email: '',
     useCase: '',
+    description: '', // ✅ new field
   });
 
   const [status, setStatus] = useState(null);
@@ -38,7 +39,7 @@ const CTAFormSection = () => {
 
       if (res.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', useCase: '' });
+        setFormData({ name: '', email: '', useCase: '', description: '' });
         window.location.href = '/thank-you';
       } else {
         throw new Error('Submission failed');
@@ -97,6 +98,19 @@ const CTAFormSection = () => {
               <option value="SMMA / Client Work">SMMA / Client Work</option>
               <option value="Other">Other</option>
             </select>
+          </div>
+
+          {/* ✅ New Description Field */}
+          <div className="form-group">
+            <label htmlFor="description">Describe your needs</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="What exactly are you looking to build or automate?"
+              value={formData.description}
+              onChange={handleChange}
+              rows={4}
+            />
           </div>
 
           <button type="submit" className="cta-submit-button">

@@ -7,7 +7,7 @@ export async function handler(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const { name, email, useCase, source, timestamp } = JSON.parse(event.body);
+  const { name, email, useCase, source, timestamp, description } = JSON.parse(event.body);
 
   const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
   const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
@@ -27,6 +27,7 @@ export async function handler(event) {
           Name: name,
           Email: email,
           UseCase: useCase,
+          Description: description,     // ✅ NEW FIELD
           Source: source,
         },
       }),
