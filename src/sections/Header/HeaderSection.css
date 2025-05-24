@@ -327,7 +327,7 @@
     font-size: 1rem;
     padding: 0.25rem 0;
   }
-}
+
 /* 🔽 Updated Mobile Dropdown */
 .nav-links {
   position: absolute;
@@ -386,7 +386,7 @@
   background: rgba(0, 255, 255, 0.1);
   color: #00c8ff;
 }
-
+}
 /* Subtle fade-in for dropdown */
 @keyframes fadeIn {
   from {

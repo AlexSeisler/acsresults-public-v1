@@ -1,0 +1,223 @@
+/* Banner Container */
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 3rem;
+  background-color: #0a0a0a;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Shared Banner Layout */
+.banner {
+  width: 1500px;
+  height: 500px;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* ---------------- Option A ---------------- */
+.banner-a {
+  background: radial-gradient(circle at 30% 30%, #1b1b1b, #111);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.banner-a-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.banner-a .left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.banner-a .left p {
+  font-size: 1.75rem;
+  opacity: 0.85;
+  color: #ccc;
+}
+
+.banner-a .right h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: #00e0ff;
+}
+
+.banner-a .right p {
+  font-size: 1.4rem;
+  opacity: 0.95;
+  color: #e0e0e0;
+}
+
+.banner-a .link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00e0ff;
+  margin-top: 0.5rem;
+}
+
+/* ---------------- Option C ---------------- */
+.banner-c {
+  background: linear-gradient(120deg, #0e0e0e, #1a1a1a);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tile {
+  flex: 1;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+}
+
+.tile h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.tile p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  color: #cfcfcf;
+}
+
+.grid-footer {
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 1;
+  font-weight: bold;
+  color: #00e0ff;
+}
+
+/* Shared Link Styling */
+.link {
+  font-weight: bold;
+  color: #00e0ff;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #0ff;
+}
+/* Optimized CSS for Banner A (Final Version) */
+
+.banner-a {
+  width: 1500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #1d1d1d, #111);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.08), inset 0 0 1px #2a2a2a;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.02), transparent 70%);
+  z-index: 0;
+}
+
+.banner-a-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-a .left h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.1);
+}
+
+.banner-a .left p {
+  font-size: 1.6rem;
+  color: #cfcfcf;
+  opacity: 0.9;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.banner-a .right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-a .right h2 {
+  font-size: 2rem;
+  color: #00e0ff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner-a .right p {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.banner-a .link {
+  color: #00e0ff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.banner-a .link:hover {
+  color: #00ffff;
+}
