@@ -6,6 +6,11 @@ import './BannerShowcase.css';
 const BannerShowcase = () => {
   return (
     <div className="banner-wrapper">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       {/* 🌟 Option A – Personal Brand Banner */}
       <div className="banner banner-a">
         <div className="banner-content banner-a-content">
