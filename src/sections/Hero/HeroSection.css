@@ -132,40 +132,45 @@ min-height: auto;
   opacity: 0.85;
 }
 
-/* ========= CALL TO ACTION ========== */
+/* ========= HERO CTA BUTTON ========= */
 .hero-cta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: white;
-  background-color: transparent;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(0, 200, 255, 0.07), transparent);
   border: 2px solid var(--brand-signal);
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
   position: relative;
   transition: all 0.35s ease;
-  cursor: pointer;
+  box-shadow: 0 0 0 rgba(0, 200, 255, 0);
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(6px);
 }
 
 .hero-cta:hover {
-  background-color: var(--brand-signal);
+  background: var(--brand-signal);
   color: #0a0a0a;
-  box-shadow: 0 0 24px rgba(0, 200, 255, 0.5);
-  transform: scale(1.03);
+  transform: scale(1.04);
+  box-shadow: 0 0 36px rgba(0, 200, 255, 0.35);
 }
 
 .hero-cta::after {
   content: '→';
-  margin-left: 0.75rem;
+  margin-left: 0.65rem;
+  font-weight: 600;
   transition: transform 0.3s ease;
-  display: inline-block;
 }
 
 .hero-cta:hover::after {
-  transform: translateX(5px);
+  transform: translateX(6px);
 }
+
 /* 🔽 Mobile Optimization Starts */
 @media (max-width: 600px) {
   .hero-section {

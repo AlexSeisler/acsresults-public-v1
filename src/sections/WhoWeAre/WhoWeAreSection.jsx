@@ -1,5 +1,3 @@
-// src/sections/WhoWeAre/WhoWeAreSection.jsx
-
 import React, { useEffect, useRef } from 'react';
 import './WhoWeAreSection.css';
 import { whoWeAreSection } from '../../content/content.js';
@@ -8,35 +6,33 @@ const WhoWeAreSection = () => {
   const carouselRef = useRef();
 
   useEffect(() => {
-  const ring = carouselRef.current;
-  let angle = 0;
-  let isVisible = true;
+    const ring = carouselRef.current;
+    let angle = 0;
+    let isVisible = true;
 
-  const handleScroll = (e) => {
-    if (!isVisible) return;
-    e.preventDefault();
-    angle += e.deltaY * 0.2;
-    ring.style.transform = `rotateY(${angle}deg)`;
-  };
+    const handleScroll = (e) => {
+      if (!isVisible) return;
+      e.preventDefault();
+      angle += e.deltaY * 0.2;
+      ring.style.transform = `rotateY(${angle}deg)`;
+    };
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      isVisible = entry.isIntersecting;
-      if (!isVisible) ring.style.animationPlayState = 'paused';
-      else ring.style.animationPlayState = 'running';
-    },
-    { threshold: 0.3 }
-  );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        ring.style.animationPlayState = isVisible ? 'running' : 'paused';
+      },
+      { threshold: 0.3 }
+    );
 
-  observer.observe(ring);
-  ring.addEventListener('wheel', handleScroll, { passive: false });
+    observer.observe(ring);
+    ring.addEventListener('wheel', handleScroll, { passive: false });
 
-  return () => {
-    observer.disconnect();
-    ring.removeEventListener('wheel', handleScroll);
-  };
-}, []);
-
+    return () => {
+      observer.disconnect();
+      ring.removeEventListener('wheel', handleScroll);
+    };
+  }, []);
 
   return (
     <section className="who-we-are-section" id="who-we-are">
@@ -75,8 +71,6 @@ const WhoWeAreSection = () => {
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );

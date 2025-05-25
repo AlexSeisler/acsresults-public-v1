@@ -1,5 +1,3 @@
-// src/sections/LiveCampaign/LiveCampaignSection.jsx
-
 import React from 'react';
 import './LiveCampaignSection.css';
 import { liveCampaignSection } from '../../content/content.js';
@@ -12,16 +10,14 @@ const LiveCampaignSection = () => {
         <h2 className="campaign-header">{liveCampaignSection.header}</h2>
         <p className="campaign-body">{liveCampaignSection.body}</p>
 
-        {/* 🛠️ Civic Badge & CTA */}
+        {/* 🛠️ Case Study CTA */}
         <a
-          href="#"
+          href={liveCampaignSection.cta.link}
           className="campaign-cta"
-          onClick={(e) => {
-            e.preventDefault();
-            alert('🔗 Campaign highlights coming soon...');
-          }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span className="cta-label">{liveCampaignSection.cta}</span>
+          <span className="cta-label">{liveCampaignSection.cta.text}</span>
           <div className="cta-glow" />
         </a>
       </div>

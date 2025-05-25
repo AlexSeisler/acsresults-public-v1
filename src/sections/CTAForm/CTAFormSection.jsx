@@ -9,7 +9,7 @@ const CTAFormSection = () => {
     name: '',
     email: '',
     useCase: '',
-    description: '', // ✅ new field
+    description: '',
   });
 
   const [status, setStatus] = useState(null);
@@ -39,7 +39,12 @@ const CTAFormSection = () => {
 
       if (res.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', useCase: '', description: '' });
+        setFormData({
+          name: '',
+          email: '',
+          useCase: '',
+          description: '',
+        });
         window.location.href = '/thank-you';
       } else {
         throw new Error('Submission failed');
@@ -57,6 +62,7 @@ const CTAFormSection = () => {
         <p className="cta-form-subtext">{ctaFormSection.body}</p>
 
         <form className="cta-form" onSubmit={handleSubmit}>
+          {/* Name Field */}
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -70,6 +76,7 @@ const CTAFormSection = () => {
             />
           </div>
 
+          {/* Email Field */}
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -83,6 +90,7 @@ const CTAFormSection = () => {
             />
           </div>
 
+          {/* Use Case Dropdown */}
           <div className="form-group">
             <label htmlFor="useCase">What are you looking to automate?</label>
             <select
@@ -93,14 +101,15 @@ const CTAFormSection = () => {
               required
             >
               <option value="">Select a use case</option>
-              <option value="School Campaign">School Campaign</option>
-              <option value="Product Launch">Product Launch</option>
-              <option value="SMMA / Client Work">SMMA / Client Work</option>
-              <option value="Other">Other</option>
+              {ctaFormSection.dropdownOptions.map((option, idx) => (
+                <option key={idx} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
           </div>
 
-          {/* ✅ New Description Field */}
+          {/* Additional Description Field */}
           <div className="form-group">
             <label htmlFor="description">Describe your needs</label>
             <textarea
@@ -113,10 +122,12 @@ const CTAFormSection = () => {
             />
           </div>
 
+          {/* Submit Button */}
           <button type="submit" className="cta-submit-button">
-            Get in Touch →
+            {ctaFormSection.cta}
           </button>
 
+          {/* Status Feedback */}
           <div className="cta-form-status">
             {status === 'loading' && <p className="status loading">Submitting...</p>}
             {status === 'success' && <p className="status success">✅ Submitted successfully!</p>}

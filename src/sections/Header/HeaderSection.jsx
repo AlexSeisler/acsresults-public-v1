@@ -1,3 +1,5 @@
+// src/sections/Header/HeaderSection.jsx
+
 import React, { useState, useEffect } from 'react';
 import './HeaderSection.css';
 
@@ -15,36 +17,38 @@ const HeaderSection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-ambient" />
       
       <nav className="top-nav" role="navigation" aria-label="Main Navigation">
+        {/* 🔰 Logo */}
         <div className="logo">
-        <img src="/Logo.png" alt="ACS Results Logo" />
-        <span className="logo-text">ACS Results</span>
-      </div>
+          <img src="/Logo.png" alt="ACS Results Logo" />
+          <span className="logo-text">ACS Results</span>
+        </div>
 
-
+        {/* 📱 Mobile Nav */}
         <div className="menu-wrapper">
-        <button
-          className="menu-toggle"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          aria-controls="main-menu"
-          onClick={toggleMenu}
-        >
-          ☰
-        </button>
+          <button
+            className="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            aria-controls="main-menu"
+            onClick={toggleMenu}
+          >
+            ☰
+          </button>
 
-        <ul className={`nav-links ${menuOpen ? 'open' : ''}`} id="main-menu">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#who-we-are">Who We Are</a></li>
-          <li><a href="#our-systems">Systems</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
+          <ul className={`nav-links ${menuOpen ? 'open' : ''}`} id="main-menu">
+            <li><a href="#hero" onClick={closeMenu}>Home</a></li>
+            <li><a href="#who-we-are" onClick={closeMenu}>Who We Are</a></li>
+            <li><a href="#our-systems" onClick={closeMenu}>Systems</a></li>
+            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
   );

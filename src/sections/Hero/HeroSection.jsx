@@ -1,5 +1,3 @@
-// src/sections/Hero/HeroSection.jsx
-
 import React from 'react';
 import './HeroSection.css';
 import { heroSection } from '../../content/content.js';
@@ -14,8 +12,15 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-headline">{heroSection.headline}</h1>
         <p className="hero-subheading">{heroSection.subheading}</p>
-        <a href="#our-systems" className="hero-cta">
-          {heroSection.cta}
+
+        {/* 🚀 CTA to Skool Trifecta with UTM tracking */}
+        <a
+          href={heroSection.cta.link}
+          className="hero-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {heroSection.cta.text}
         </a>
       </div>
     </section>

@@ -25,9 +25,11 @@
 
 /* ---------------- Option A ---------------- */
 .banner-a {
-  background: radial-gradient(circle at 30% 30%, #1b1b1b, #111);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 1230px; /* Previously 1500px */
+  height: 312px;  /* Previously 500px */
+  padding: 3rem 3rem; /* Tightened for more centralized layout */
 }
+
 
 .banner-a-content {
   display: flex;
@@ -36,36 +38,31 @@
 }
 
 .banner-a .left h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
+  font-size: 2.6rem; /* Was 4rem */
+  margin-bottom: 0.3rem;
 }
 
 .banner-a .left p {
-  font-size: 1.75rem;
-  opacity: 0.85;
-  color: #ccc;
+  font-size: 1.2rem; /* Was 1.6rem */
+  margin-top: 0.2rem;
 }
 
 .banner-a .right h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.75rem;
-  color: #00e0ff;
+  font-size: 1.4rem; /* Was 2rem */
+  margin-bottom: 0.4rem;
 }
 
 .banner-a .right p {
-  font-size: 1.4rem;
-  opacity: 0.95;
-  color: #e0e0e0;
+  font-size: 1.1rem; /* Was 1.3rem */
+  margin: 0.2rem 0;
+  line-height: 1.4;
 }
 
 .banner-a .link {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #00e0ff;
-  margin-top: 0.5rem;
+  font-size: 1rem; /* Was 1.2rem */
+  margin-top: 0.3rem;
 }
+
 
 /* ---------------- Option C ---------------- */
 .banner-c {
@@ -137,7 +134,7 @@
 /* Optimized CSS for Banner A (Final Version) */
 
 .banner-a {
-  width: 1500px;
+  width: 1100px;
   height: 500px;
   display: flex;
   align-items: center;
@@ -219,5 +216,283 @@
 }
 
 .banner-a .link:hover {
+  color: #00ffff;
+}
+/* ---------------- Option D – Trifecta Banner ---------------- */
+.banner-d {
+  width: 1230px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #1a1a1a, #0d0d0d);
+  border-radius: 18px;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.06), inset 0 0 1px #2a2a2a;
+  padding: 2rem 3rem;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.banner-d::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.02), transparent 70%);
+  z-index: 0;
+}
+
+.banner-d-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.trifecta-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: #00e0ff;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.trifecta-stack {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0.4rem 0 1.2rem;
+  color: #fff;
+}
+
+.trifecta-stack .dot {
+  font-weight: 600;
+  opacity: 0.5;
+  margin: 0 0.5rem;
+}
+
+.trifecta-stack .smmaa,
+.trifecta-stack .clone {
+  color: #ffffff;
+}
+
+.trifecta-stack .cian {
+  color: #00e0ff;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  color: #d0d0d0;
+  margin-bottom: 1.2rem;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+.banner-d .link {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00e0ff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.banner-d .link:hover {
+  color: #00ffff;
+}
+.trifecta-stack {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0.4rem 0 1.2rem;
+  color: #fff;
+}
+
+.trifecta-stack .smma {
+  color: #ffffff;
+}
+
+.trifecta-stack .cian {
+  color: #50b0d8; /* muted blue-gray */
+}
+
+.trifecta-stack .creator {
+  color: #ffffff;
+}
+
+.trifecta-stack .dot {
+  font-weight: 600;
+  opacity: 0.5;
+  margin: 0 0.5rem;
+}
+.banner-trifecta {
+  width: 1200px;
+  height: auto;
+  background: radial-gradient(circle at center, #1a1a1a, #111);
+  padding: 3rem 4rem;
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.05), inset 0 0 1px #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 3rem;
+}
+
+/* Header */
+.trifecta-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  color: #00e0ff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+/* Trifecta Stack */
+.trifecta-stack {
+  font-size: 3.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.trifecta-stack .smma,
+.trifecta-stack .creator {
+  color: #ffffff;
+}
+
+.trifecta-stack .cian {
+  color: #0b5371;
+}
+
+.trifecta-stack .dot {
+  font-weight: 600;
+  opacity: 0.5;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* Subtitle */
+.trifecta-sub {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 1.2rem;
+}
+
+/* Link */
+.trifecta-link {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #00e0ff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.trifecta-link:hover {
+  color: #00ffff;
+}
+/* ---------------- Option D – Trifecta Banner (Final) ---------------- */
+.banner-d {
+  width: 1200px;
+  padding: 3rem 4rem;
+  background: radial-gradient(circle at center, #1a1a1a, #0d0d0d);
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.05), inset 0 0 1px #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.banner-d::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.025), transparent 70%);
+  z-index: 0;
+}
+
+.banner-d-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Label (Top Title) */
+.trifecta-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #00e0ff;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+/* System Stack Display */
+.trifecta-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.trifecta-stack .smma {
+  color: #ffffff;
+}
+
+.trifecta-stack .cian {
+  color: #76848a;
+}
+
+.trifecta-stack .creator {
+  color: #ffffff;
+}
+
+.trifecta-stack .dot {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1;
+  opacity: 0.5;
+}
+
+/* Tagline */
+.trifecta-sub {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #d0d0d0;
+  opacity: 0.95;
+  margin-bottom: 1.3rem;
+}
+
+/* Website Link */
+.trifecta-link {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00e0ff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.trifecta-link:hover {
   color: #00ffff;
 }
