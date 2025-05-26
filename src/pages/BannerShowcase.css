@@ -496,3 +496,83 @@
 .trifecta-link:hover {
   color: #00ffff;
 }
+
+
+/* ======= TRIFECTA FACEBOOK BANNER ======= */
+.banner-deploy {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 675px;
+  margin: 3rem auto;
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.02), rgba(0, 0, 0, 0.95)),
+              url('/public-assets/grid-bg-dark.png') center/cover no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 32px rgba(0, 200, 255, 0.04);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.deploy-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.04), transparent 80%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.deploy-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  color: #ffffff;
+}
+
+.deploy-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #00c8ff;
+  text-shadow: 0 0 18px rgba(0, 200, 255, 0.25);
+  margin-bottom: 1.25rem;
+}
+
+.deploy-subheader {
+  font-size: 1.3rem;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+
+.deploy-cta {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00c8ff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.deploy-cta:hover {
+  border-color: #00c8ff;
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(0, 200, 255, 0.25);
+}
+
+.deploy-badge {
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  color: #888;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}

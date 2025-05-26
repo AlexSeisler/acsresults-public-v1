@@ -27,7 +27,7 @@ const HeaderSection = () => {
         {/* 🔰 Logo */}
         <div className="logo">
           <img src="/Logo.png" alt="ACS Results Logo" />
-          <span className="logo-text">ACS Results</span>
+          <span className="logo-text">ACS Results AI</span>
         </div>
 
         {/* 📱 Mobile Nav */}

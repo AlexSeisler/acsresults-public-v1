@@ -1,3 +1,6 @@
+
+
+
 // src/sections/BannerShowcase/BannerShowcase.jsx
 
 import React from 'react';
@@ -6,12 +9,9 @@ import './BannerShowcase.css';
 const BannerShowcase = () => {
   return (
     <div className="banner-wrapper">
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      {/* 🌟 Option A – Personal Brand Banner */}
+
+
+
       <div className="banner banner-a">
         <div className="banner-content banner-a-content">
           <div className="left">
@@ -46,6 +46,26 @@ const BannerShowcase = () => {
           acsresultsai.net
         </a>
       </div>
+
+      {/* 🚀 NEW: Trifecta Deployment Banner */}
+      <div className="banner banner-deploy">
+        <div className="deploy-overlay" />
+
+        <div className="deploy-content">
+          <h2 className="deploy-title">Clone the Stack. Deploy the Trifecta.</h2>
+          <p className="deploy-subheader">SMMAA • CIAN • CreatorOps</p>
+          <a
+            href="https://acsresultsai.net"
+            className="deploy-cta"
+            target="_blank"
+            rel="noreferrer"
+          >
+            acsresultsai.net
+          </a>
+          <p className="deploy-badge">Founder-Built. Agent-Powered.</p>
+        </div>
+      </div>
+
     </div>
   );
 };

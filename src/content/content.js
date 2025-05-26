@@ -1,88 +1,88 @@
-// ✅ Finalized content.js – Trifecta Aligned | Web CTA & Funnel Ready
+// ✅ content.js | Updated for Full Ecosystem Conversion – Trifecta OS Aligned
 
 export const heroSection = {
-  headline: "Systems That Replace Teams.",
+  headline: "Earn Your Stack. Deploy Your OS.",
   subheading:
-    "ACS Results AI gives founders, agencies, and creators the execution engine they’ve been missing — modular, memory-powered, and built by a systems founder, not a marketer.",
+    "ACS Results AI isn’t a tool — it’s a progression-based automation ecosystem for founders, agencies, and creators who want to scale with systems, not teams.",
   cta: {
-    text: "Join the Trifecta OS →",
+    text: "Enter the Trifecta →",
     link: "https://www.skool.com/acs-results-ai-trifecta-4974/about?ref=6827c5683eb14f0892937e9c1c30c835"
   },
 };
 
 export const whoWeAreSection = {
-  header: "Built by an Operator. For Operators.",
-  body: `ACS Results AI was founded by Alex Seisler to help builders replace assistants, editors, and ops teams with real systems.
+  header: "From Operator to Architect.",
+  body: `ACS Results AI was founded by systems architect Alex Seisler to help builders unlock the same automation layers that replaced agencies, editors, and assistants.
 
-This isn’t another tool. It’s the infrastructure layer for execution. Think AI memory, role-based routing, scalable workflows... all baked in.`,
+This isn’t a coaching group. It’s the OS for the next wave of execution. Every tool here was earned through real campaigns, then broken down so you can run them too — brick by brick.`,
   cards: [
-    'Agencies & Campaign Teams',
-    'Founders & Indie Builders',
-    'Creators & Educators'
+    'SMMAA Operators',
+    'CIAN Builders',
+    'CreatorOps Monetizers'
   ],
   cardDescriptions: [
-    'Automated approvals, content calendars, and full client systems.',
-    'Persistent memory, AI agents, and operating logic — plug into your stack.',
-    'Clone your content. Build repeatable systems. Scale without burnout.'
+    'Launch your own AI-powered content agency system — and resell it once built.',
+    'Build your second brain, train your team of agents, and scale operations with AI.',
+    'Plug in the best systems to monetize your own brand, offer, or idea.'
   ]
 };
 
 export const ourSystemsSection = {
-  header: "What Powers ACS Results",
-  tagline: "Three systems. One OS. Infinite leverage.",
+  header: "Build Your System. Brick by Brick.",
+  tagline: "Three tracks. One OS. Your execution layer.",
   smmaa: {
     title: "SMMAA – Social Media Marketing Automation Agency",
-    desc: "Full-stack automation for content planning, approvals, and billing. Built for agencies and campaign managers ready to scale.",
+    desc: "Build and sell a fully automated content agency system. Includes planner bots, film flows, approval dashboards, and white-label unlocks.",
     cta: {
-      text: "Launch your Content Engine →",
+      text: "Run Your SMMAA →",
       link: "https://www.skool.com/acs-results-ai-trifecta-4974/about?ref=6827c5683eb14f0892937e9c1c30c835"
     }
   },
   cian: {
-    title: "CIAN – Centralized Intelligence Automation Network",
-    desc: "Scoped memory, task-aware AI agents, and execution routing. Your brain, connected to your stack.",
+    title: "CIAN – Central Intelligence Automation Network",
+    desc: "Train your own memory-based AI team. PlannerBot, ClientBot, PostBot, and more — all routed by your own General Manager agent.",
     cta: {
-      text: "Build Your AI Command Layer →",
+      text: "Build Your AI OS →",
       link: "https://www.skool.com/acs-results-ai-trifecta-4974/about?ref=6827c5683eb14f0892937e9c1c30c835"
     }
   },
   tools: {
-    title: "CreatorOps – Clone & Monetize Your IP",
-    desc: "Turn your knowledge into content systems. Automate output. Monetize everything you know.",
+    title: "CreatorOps – Monetize Your Knowledge Stack",
+    desc: "Use SMMAA + CIAN to build your dream business — then scale it with full-stack automation. CreatorOps is the monetization sandbox.",
     cta: {
-      text: "Monetize Your IP →",
+      text: "Launch with CreatorOps →",
       link: "https://www.skool.com/acs-results-ai-trifecta-4974/about?ref=6827c5683eb14f0892937e9c1c30c835"
     }
   },
 };
 
 export const liveCampaignSection = {
-  header: "Tested in the Real World. Ready for Yours.",
-  body: "ACS Results powers automation backends for real campaigns — like civic events and agency rollouts — where execution speed matters. The same systems now scale across creators, startups, and founders.",
+  header: "Born in the Field. Refined in the Stack.",
+  body: "From real civic campaigns to content-driven founders — ACS Results powers automation that’s proven under pressure. These aren’t ideas. They’re working systems now available to clone.",
   cta: {
-    text: "Explore Case Study →",
+    text: "Explore Real-World Systems →",
     link: "https://www.skool.com/acs-results-ai-trifecta-4974/about?ref=6827c5683eb14f0892937e9c1c30c835"
   }
 };
 
 export const ctaFormSection = {
-  header: "Let’s Plug In Your Stack.",
-  body: "Tell us what you're building and what you wish was automated — content ops, approvals, task flows, or client systems. We’ll show you how the Trifecta maps into your world.",
+  header: "What Will You Automate First?",
+  body: "Pick the system path that fits your business — and we’ll show you how to deploy it. Whether you're scaling content, building memory agents, or monetizing your brand, the Trifecta has a track for you.",
   fields: ["Name", "Email", "What are you looking to automate?"],
-  cta: "Get Connected →",
+  cta: "Get Your Stack Started →",
   dropdownOptions: [
-    "SMMAA – Content + Client Ops",
-    "CIAN – AI + Assistant Layer",
-    "CreatorOps – IP → System"
+    "SMMAA – Content & Agency Automation",
+    "CIAN – AI Team + Ops Intelligence",
+    "CreatorOps – Monetize Your OS"
   ]
 };
 
 export const footerSection = {
-  tagline: "ACS Results — The Trifecta OS for Founders & Builders",
+  tagline: "ACS Results — The Execution OS for Founders & Builders",
   links: ["Instagram", "Twitter", "YouTube", "Contact"],
-  note: "Operator-built. System-native. Built to scale.",
+  note: "No hype. No gurus. Just AI-powered execution, unlocked brick by brick.",
   loopbackCTA: {
-    text: "Already inside Skool? Visit acsresultsai.net for templates, demos, and new drops.",
+    text: "Already inside Skool? Visit acsresultsai.net for templates, walkthroughs, and drops.",
     link: "https://acsresultsai.net"
   }
 };
